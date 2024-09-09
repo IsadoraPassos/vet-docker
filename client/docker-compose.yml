@@ -1,0 +1,37 @@
+version: "3.9"
+services:
+  web:
+    image: isadora145/vet-docker:v2
+    container_name: web_prod
+    environment:
+      - APP_ENV=local
+      - DB_CONNECTION=mysql
+      - DB_HOST=mysql
+      - DB_PORT=3306
+      - DB_DATABASE=laravel
+      - DB_USERNAME=laravel_user
+      - DB_PASSWORD=laravel_password
+    ports:
+      - "80:80" #http
+      - "443:443" #https
+    depends_on:
+      - mysql
+    working_dir: /var/www/app
+    command: sh -c "php artisan migrate --force && php artisan db:seed --force && /usr/bin/supervisord -c /etc/supervisor/supervisord.conf"
+    
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_db_prod
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: laravel
+      MYSQL_USER: laravel_user
+      MYSQL_PASSWORD: laravel_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    
+volumes:
+  mysql_data:
