@@ -1,10 +1,10 @@
 # Imagem de uma aplicação Laravel simples no Docker Hub
 
-Este repositório contém os arquivos criados durante o desenvolvimento do trabalho de Docker da disciplina de Tecnologias Sustentáveis. A pasta `docker` contém os arquivos usados para gerar o build da imagem que está disponível no Docker Hub, enquanto a pasta `client` contém o arquivo necessário para subir a aplicação.
+Este repositório contém os arquivos criados durante o desenvolvimento do trabalho de Docker da disciplina de Tecnologias Sustentáveis. A pasta `docker` contém os arquivos usados para gerar o build da imagem que está disponível no Docker Hub, enquanto a pasta `imagem` contém o arquivo necessário para subir a aplicação.
 
 ## Rodando o projeto pela imagem
 
-1. Baixe o arquivo **docker-compose.yml** da pasta _client_.
+1. Baixe o arquivo **docker-compose.yml** da pasta _imagem_.
 2. Abra o terminal (se estiver usando Windows, será necessário ter o WSL instalado) na mesma pasta onde o arquivo foi baixado e execute o seguinte comando:
 
     ```bash
