@@ -15,6 +15,9 @@
         <th>Sexo</th>
         <th>Dono</th>
         <th>Especie</th>
+        <th></th>
+        <th></th>
+        <th></th>
     </thead>
     <tbody>
         @foreach($animais as $a)

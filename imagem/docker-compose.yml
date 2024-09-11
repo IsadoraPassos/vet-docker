@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   web:
-    image: isadora145/vet-docker:v2.2
+    image: isadora145/vet-docker:v3
     container_name: web_vet
     environment:
       - APP_ENV=local

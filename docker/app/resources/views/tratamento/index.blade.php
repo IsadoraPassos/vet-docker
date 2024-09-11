@@ -12,6 +12,8 @@
     <thead>
         <th>Descrição</th>
         <th>Animal</th>
+        <th></th>
+        <th></th>
     </thead>
     <tbody>
         @foreach($tratamentos as $t)

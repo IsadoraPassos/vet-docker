@@ -14,6 +14,8 @@
         <th>Data</th>
         <th>Tratamento</th>
         <th>Veterinario</th>
+        <th></th>
+        <th></th>
     </thead>
     <tbody>
         @foreach($consultas as $c)

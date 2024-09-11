@@ -1,8 +1,8 @@
 version: "3.9"
 services:
   web:
-    image: isadora145/vet-docker:v2.2
-    container_name: web
+    image: isadora145/vet-docker:v3
+    container_name: web_vet
     build:
       context: .
       dockerfile: ./docker/Dockerfile
@@ -15,7 +15,14 @@ services:
     ports:
       - "80:80" #http
       - "443:443" #https
-    command: sh -c "php artisan migrate --force && php artisan db:seed --force && /usr/bin/supervisord -c /etc/supervisor/supervisord.conf"
+    command: sh -c "
+          while ! php -r 'try { new PDO(\"mysql:host=mysql;dbname=\laravel\", \"\laravel_user\", \"\laravel_password\"); } catch (PDOException \$e) { exit(1); }'; do
+            echo 'Waiting for MySQL to be ready...';
+            sleep 5;
+          done;
+          echo 'MySQL is up - executing command';
+          php artisan migrate --force && php artisan db:seed --force &&
+          /usr/bin/supervisord -c /etc/supervisor/supervisord.conf"
     depends_on:
       - mysql
     

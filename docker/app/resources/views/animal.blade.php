@@ -16,11 +16,13 @@
         <label for="idade">Idade:</label>
         <input type="number" id="idade" name="idade">
 
-        <label for="sexo">Sexo:</label>
-        <input type="checkbox" name="sexo" value="m">
-        <label for="sexo">Macho</label>
-        <input type="checkbox" name="sexo" value="f">
-        <label for="sexo">Fêmea</label>
+        <div class="checkbox-group">
+            <label for="sexo">Sexo:</label>
+            <input type="radio" name="sexo" value="m">
+            <label for="sexo">Macho</label>
+            <input type="radio" name="sexo" value="f">
+            <label for="sexo">Fêmea</label>
+        </div>
 
         <label for="dono">Dono:</label>
         <select name="dono" id="dono">

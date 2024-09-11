@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/custom.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
+    <link rel="stylesheet" href="/app.css">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>
         {{ env('APP_NAME') }} - @yield('title')
@@ -14,8 +15,9 @@
 </head>
 
 <body>
+<main>
 @yield('content')
-
+</main>
 <script src="/js/app.js"></script>
 <script src="/js/jquery.min.js"></script>
 <script src="/js/bootstrap.bundle.min.js"></script>
