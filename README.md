@@ -11,7 +11,9 @@ Este repositório contém os arquivos criados durante o desenvolvimento do traba
     docker compose up
     ```
 
-3. Aguarde a configuração do ambiente. Em seguida, já será possível acessar a aplicação em: [http://localhost](http://localhost)
+3. Aguarde a configuração do ambiente, isso pode demorar um pouco na primeira execução, quando a linha de código a seguir for exibida a configuração terminou:
+> INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+5. Em seguida, já será possível acessar a aplicação em: [http://localhost](http://localhost)
 
 ### Observação:
 O arquivo está configurado para rodar na porta 80. Se essa porta estiver ocupada, isso pode resultar em um erro. Para resolver, você pode parar a execução do programa que está ocupando a porta ou alterar a variável _port_ no arquivo `docker-compose.yml`.
