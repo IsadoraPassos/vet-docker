@@ -20,5 +20,6 @@ O arquivo está configurado para rodar na porta 80. Se essa porta estiver ocupad
 
 ## Referências
 
+- Imagem no docker hub: [isadora145/vet-docker](https://hub.docker.com/repository/docker/isadora145/vet-docker/general)
 - Configuração do Dockerfile: [docker-php-com-nginx](https://github.com/urnauzao/docker-php-com-nginx) e [Tutorial Armazenando e Executando uma Aplicação Laravel](https://www.youtube.com/watch?v=4RFkrzDPCpg)
 - Configuração da imagem: [Como Criar Imagem Docker para Ambiente de Produção](https://www.youtube.com/watch?v=iDJjb2zYa4c)
